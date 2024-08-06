@@ -1,6 +1,18 @@
 ## Metagrammers: Forjando el Nuevo Mundo
 
 ### Descripción del Proyecto
+$\color{#D29922}\textsf{\Large\&#x26A0;\kern{0.2cm}\normalsize  Avance del Proyecto}$ 
+   ```bash
+    // El proyecto se encuentra actualmente al 10% de su meta final
+    // Fatan apartados como:
+    // * Implementación Responsive
+    // * Completar funciones Auth
+    // * Agregar el Ranking
+    // * Agregar el Lore
+    // * Información del Autor
+    // * Conversión de Metakey a Metafragment
+    // * Otras funcionalidades propias de la naturaleza del proyecto y metas, iré actualizando de manera constante.
+```
 
 **Metagrammers** es una plataforma innovadora que fusiona la emoción de los desafíos de programación con la temática del metaverso. Este proyecto ha sido desarrollado para la hackathon con el objetivo de proporcionar a los programadores un entorno interactivo y didáctico donde puedan poner a prueba y mejorar sus habilidades de codificación mientras exploran un universo digital lleno de posibilidades.
 
