@@ -5,17 +5,13 @@ import { HomeText1, MFCountdown, MFCountdownContainer, WordLogo } from "../style
 import { Fade } from "@mui/material";
 import MetaKey from "./_components/MetaKey";
 import GlitchClip from "react-glitch-effect/core/GlitchClip";
+import { Section11 } from "../styles";
 
 const Page = () => {
 	return (
 		<Fade in timeout={400}>
 			<Grid container spacing={0} style={{ height: "100%" }}>
-				<Grid
-					xs={12}
-					sm={7}
-					md={6}
-					style={{ display: "flex", flexDirection: "column", justifyContent: "center", padding: "0px 40px" }}
-				>
+				<Grid xs={12} sm={7} md={6} sx={Section11}>
 					<GlitchClip duration={2000}>
 						<WordLogo style={{ fontSize: 75, textAlign: "center" }}>METAGRAMMERS</WordLogo>
 					</GlitchClip>
