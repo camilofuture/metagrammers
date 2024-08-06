@@ -11,7 +11,9 @@ const Page = () => {
 		<Fade in timeout={400}>
 			<Grid container spacing={0} style={{ height: "100%" }}>
 				<Grid
-					xs={6}
+					xs={12}
+					sm={7}
+					md={6}
 					style={{ display: "flex", flexDirection: "column", justifyContent: "center", padding: "0px 40px" }}
 				>
 					<GlitchClip duration={2000}>
@@ -38,7 +40,7 @@ const Page = () => {
 					</MFCountdownContainer>
 				</Grid>
 
-				<Grid xs={6} style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+				<Grid xs={12} sm={5} md={6} style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
 					<MetaKey rarity={5} />
 				</Grid>
 			</Grid>
