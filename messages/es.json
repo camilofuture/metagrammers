@@ -1,0 +1,35 @@
+{
+	"metadata": {
+		"root": {
+			"title": "Metagrammers",
+			"description": "Metagrammers es una plataforma innovadora que fusiona la emoción de los desafíos de programación con la temática del metaverso. Desarrollada para una hackathon, proporciona a los programadores un entorno interactivo y didáctico donde pueden poner a prueba y mejorar sus habilidades de codificación mientras exploran un universo digital lleno de posibilidades."
+		}
+	},
+	"menu": {
+		"m1000": "Localhost",
+		"m1100": "User",
+		"m1101": "MetaKey",
+		"s1": "User Stuff"
+	},
+	"metakey": {
+		"legend1": "This is a Common MetaKey",
+		"legend2": "This is a Special MetaKey",
+		"legend3": "This is a Rare MetaKey",
+		"legend4": "This is an Epic MetaKey",
+		"legend5": "This is a Legendary MetaKey"
+	},
+	"signup": {
+		"label1": "Nombre Completo",
+		"label2": "Metagrammer Tag",
+		"label3": "Correo Electrónico",
+		"label4": "Contraseña",
+		"ph1": "Ingresa tu nombre completo",
+		"ph2": "Ingresa tu Tag de Metagrammer",
+		"ph3": "Ingresa tu correo electrónico",
+		"ph4": "Ingresa tu Contraseña"
+	},
+	"notfound": {
+		"text1": "La conexion con el metaverso ha fallado.",
+		"btntext": "Volver a Localhost"
+	}
+}
