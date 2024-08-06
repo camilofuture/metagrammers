@@ -137,7 +137,7 @@ const MetaKey = ({ rarity, tag }) => {
 							<MetaKeyTitle>MetaKey</MetaKeyTitle>
 
 							{qrImage && <img alt="QR Code" style={{ background: "transparent" }} src={qrImage} />}
-							<MetaKeyText background={rarity}>{/*t(`legend${rarity}`)*/} This is a Legendary MetaKey</MetaKeyText>
+							<MetaKeyText background={rarity}>{t(`legend${rarity}`)}</MetaKeyText>
 						</div>
 					</MetaKeySubContainer>
 				</MetaKeyContainer>
