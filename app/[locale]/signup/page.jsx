@@ -1,6 +1,6 @@
 "use client";
 
-import { SignupFormTitle } from "@/app/styledComponents";
+import { SignUpContainer, SignupFormTitle } from "@/app/styledComponents";
 import { Button, Grow } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import React, { useState } from "react";
@@ -89,22 +89,7 @@ const SignUp = ({ close }) => {
 
 	return (
 		<Grow in timeout={400}>
-			<Grid
-				container
-				spacing={4}
-				onClick={(e) => e.stopPropagation()}
-				style={{
-					width: "35%",
-					height: "65%",
-					background: "#101015",
-					borderRadius: 20,
-					boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.25)",
-					padding: 20,
-					display: "flex",
-					alignContent: "center",
-					zIndex: 999999999,
-				}}
-			>
+			<SignUpContainer container spacing={4} onClick={(e) => e.stopPropagation()}>
 				<Grid xs={12}>
 					<SignupFormTitle>
 						<div>Registro de Metagrammer</div>
@@ -151,7 +136,7 @@ const SignUp = ({ close }) => {
 						<div>REGISTRARME</div>
 					</Button>
 				</Grid>
-			</Grid>
+			</SignUpContainer>
 		</Grow>
 	);
 };

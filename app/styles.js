@@ -126,20 +126,3 @@ export const MenuItem1 = {
 	whiteSpace: "normal", // Permite que el texto se rompa en nuevas líneas
 	wordWrap: "break-word", // Rompe palabras largas si es necesariofontWeight: 300,
 };
-
-/**  @type {import("@mui/material").SxProps} */
-export const Section11 = {
-	display: "flex",
-	flexDirection: "column",
-	justifyContent: "center",
-	padding: "0px 40px",
-	[theme.breakpoints.only("md")]: {
-		padding: "0px 30px",
-	},
-	[theme.breakpoints.only("sm")]: {
-		padding: "0px 12px",
-	},
-	[theme.breakpoints.only("xs")]: {
-		padding: "0px 8px",
-	},
-};

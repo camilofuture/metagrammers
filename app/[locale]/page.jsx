@@ -1,19 +1,26 @@
 "use client";
 
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
-import { HomeText1, MFCountdown, MFCountdownContainer, WordLogo } from "../styledComponents";
+import {
+	HomeContainer,
+	HomeSubContainer2,
+	HomeText1,
+	MFCountdown,
+	MFCountdownContainer,
+	WordLogo,
+	WordLogo2,
+} from "../styledComponents";
 import { Fade } from "@mui/material";
 import MetaKey from "./_components/MetaKey";
 import GlitchClip from "react-glitch-effect/core/GlitchClip";
-import { Section11 } from "../styles";
 
 const Page = () => {
 	return (
 		<Fade in timeout={400}>
 			<Grid container spacing={0} style={{ height: "100%" }}>
-				<Grid xs={12} sm={7} md={6} sx={Section11}>
+				<HomeContainer xs={12} sm={12} md={6}>
 					<GlitchClip duration={2000}>
-						<WordLogo style={{ fontSize: 75, textAlign: "center" }}>METAGRAMMERS</WordLogo>
+						<WordLogo2 style={{ textAlign: "center" }}>METAGRAMMERS</WordLogo2>
 					</GlitchClip>
 					<HomeText1>
 						En un universo donde la tecnología es el nuevo campo de batalla, los Metagrammers se levantan como los
@@ -34,11 +41,11 @@ const Page = () => {
 					<MFCountdownContainer>
 						<MFCountdown date={"2024-10-01T12:00:00"} />
 					</MFCountdownContainer>
-				</Grid>
+				</HomeContainer>
 
-				<Grid xs={12} sm={5} md={6} style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+				<HomeSubContainer2 xs={0} sm={0} md={6}>
 					<MetaKey rarity={5} />
-				</Grid>
+				</HomeSubContainer2>
 			</Grid>
 		</Fade>
 	);

@@ -36,6 +36,10 @@ const InterLayout = ({ children }) => {
 		if (permanentDrawer === false) setOpenedDrawer(false);
 	};
 
+	const handleExternalClick = () => {
+		setOpenedDrawer(false);
+	};
+
 	const handleDrawerSwitch = () => {
 		setPermanentDrawer(!permanentDrawer);
 		setOpenedDrawer(!openedDrawer);
@@ -67,6 +71,7 @@ const InterLayout = ({ children }) => {
 				<MDrawer
 					onMouseEnter={handleDrawerEntering}
 					onMouseLeave={handleDrawerLeaving}
+					//!onClose={handleExternalClick}
 					open={openedDrawer}
 					variant="permanent"
 					openeddrawer={openedDrawer ? 1 : 0}

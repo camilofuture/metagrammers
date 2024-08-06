@@ -2,6 +2,7 @@ import { AppBar, Avatar, Badge, Drawer, Paper } from "@mui/material";
 import { styled, keyframes } from "@mui/material/styles";
 import { globalText, orbitron } from "./font";
 import Countdown from "react-countdown";
+import Grid from "@mui/material/Unstable_Grid2/Grid2";
 
 const EX_COLOR = "#18181e";
 
@@ -43,7 +44,7 @@ export const MAppBar = styled(AppBar)(({ theme, permanentdrawer }) => ({
 	width: `calc(100% - ${80}px)`,
 	marginRight: 10,
 	background: EX_COLOR,
-	zIndex: 0,
+	zIndex: 20,
 	fontFamily: `${globalText.style.fontFamily}`,
 	color: "#fff",
 
@@ -137,6 +138,15 @@ export const MGMain = styled("main")(({ theme, permanentdrawer, openeddrawer }) 
 	...(permanentdrawer &&
 		openeddrawer && {
 			width: `calc(100vw - ${300}px)`,
+			[theme.breakpoints.down("md")]: {
+				...(openeddrawer
+					? {
+							width: "calc(100vw - 100px)",
+					  }
+					: {
+							width: "calc(100vw - 100px)",
+					  }),
+			},
 		}),
 }));
 
@@ -192,6 +202,52 @@ export const WordLogo = styled("div")(({ theme }) => ({
 	WebkitBackgroundClip: "text",
 	WebkitTextFillColor: "transparent",
 	minHeight: 49,
+}));
+
+export const WordLogo2 = styled("div")(({ theme }) => ({
+	fontFamily: `${globalText.style.fontFamily}`,
+	fontSize: 75,
+	fontWeight: 700,
+	marginTop: 1,
+	background: "linear-gradient(to bottom, #11998e, #38ef7d)",
+	WebkitBackgroundClip: "text",
+	WebkitTextFillColor: "transparent",
+	minHeight: 49,
+
+	[theme.breakpoints.only("md")]: {
+		fontSize: 50,
+	},
+	[theme.breakpoints.only("sm")]: {
+		fontSize: 64,
+	},
+	[theme.breakpoints.only("xs")]: {
+		fontSize: 58,
+	},
+}));
+
+export const HomeContainer = styled(Grid)(({ theme }) => ({
+	display: "flex",
+	flexDirection: "column",
+	justifyContent: "center",
+	padding: "0px 40px",
+	[theme.breakpoints.only("md")]: {
+		padding: "0px 30px",
+	},
+	[theme.breakpoints.only("sm")]: {
+		padding: "0px 12px",
+	},
+	[theme.breakpoints.only("xs")]: {
+		padding: "0px",
+	},
+}));
+
+export const HomeSubContainer2 = styled(Grid)(({ theme }) => ({
+	display: "flex",
+	justifyContent: "center",
+	alignItems: "center",
+	[theme.breakpoints.down("md")]: {
+		display: "none",
+	},
 }));
 
 export const HomeText1 = styled("div")(({ theme }) => ({
@@ -397,16 +453,19 @@ export const MetaKeyText = styled("div")(({ theme, background }) => ({
 }));
 
 export const MFCountdown = styled(Countdown)(({ theme }) => ({
-	fontSize: 70,
+	fontSize: 65,
 	fontFamily: `${orbitron.style.fontFamily}`,
 	background: MF_RARITY_0,
 	WebkitBackgroundClip: "text",
 	WebkitTextFillColor: "transparent",
 	[theme.breakpoints.only("xs")]: {
-		fontSize: 56,
+		fontSize: 40,
+	},
+	[theme.breakpoints.only("sm")]: {
+		fontSize: 45,
 	},
 	[theme.breakpoints.only("md")]: {
-		fontSize: 68,
+		fontSize: 50,
 	},
 }));
 
@@ -419,7 +478,6 @@ export const MFCountdownContainer = styled("div")(({ theme }) => ({
 	marginTop: 10,
 	display: "flex",
 	justifyContent: "center",
-	width: "100%",
 }));
 
 export const SignupFormTitle = styled("div")(({ theme }) => ({
@@ -471,4 +529,31 @@ export const PlaceholderForMenuOption = styled("div")(({ theme }) => ({
 	fontFamily: `${globalText.style.fontFamily}`,
 	fontWeight: 600,
 	color: "#ffffffdd",
+}));
+
+export const SignUpContainer = styled(Grid)(({ theme }) => ({
+	width: "35%",
+	height: "65%",
+	background: "#101015",
+	borderRadius: 20,
+	boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.25)",
+	padding: 20,
+	display: "flex",
+	alignContent: "center",
+	zIndex: 999999999,
+
+	[theme.breakpoints.only("md")]: {
+		width: "50%",
+		height: "65%",
+	},
+
+	[theme.breakpoints.only("sm")]: {
+		width: "65%",
+		height: "65%",
+	},
+
+	[theme.breakpoints.only("xs")]: {
+		width: "85%",
+		height: "65%",
+	},
 }));
