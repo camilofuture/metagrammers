@@ -16,9 +16,9 @@ const UserZoneContainer = styled("div")(({ theme }) => ({
 	justifyContent: "center",
 	marginLeft: 15,
 	color: "inherit",
-	[theme.breakpoints.down("md")]: {
+	/*[theme.breakpoints.down("md")]: {
 		display: "none",
-	},
+	},*/
 }));
 
 const UserName = styled("div")(({ theme, exist }) => ({
