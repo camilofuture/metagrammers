@@ -249,7 +249,7 @@ const MCodeEditor = ({ language, value, onChange }) => {
 						}}
 					>
 						<PuffLoader size={180} color="#38ef7d" />
-						<div style={{ color: "#38ef7d" }}>Cargando el Editor</div>
+						<div style={{ color: "#38ef7d" }}>Cargando el Editor...</div>
 					</div>
 				}
 			/>
