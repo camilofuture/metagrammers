@@ -78,6 +78,10 @@ export const TextField1 = {
 		fontFamily: `${globalText.style.fontFamily}`,
 	},
 
+	"& .MuiSvgIcon-root": {
+		color: "#FFFFFFCC",
+	},
+
 	"& label.Mui-focused": {
 		color: "#FFF",
 	},

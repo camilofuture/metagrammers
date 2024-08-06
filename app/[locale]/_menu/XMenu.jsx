@@ -3,12 +3,11 @@
 
 import { useMemo } from "react";
 import { useRouter } from "next/navigation";
-import { IoSchoolOutline } from "react-icons/io5";
 import PersonalMenu from "./utils/PersonalMenu";
 import { useMenu } from "@/app/context/MenuContext";
 import { useTranslations } from "next-intl";
 
-import { PiHouse, PiUserCircleDashedThin, PiUserCircleDashed } from "react-icons/pi";
+import { PiHouse, PiUserCircleDashed } from "react-icons/pi";
 
 const XMenu = ({ openeddrawer }) => {
 	const { selectedMenu, setSelectedMenu, expandedMenus, setExpandedMenus } = useMenu();

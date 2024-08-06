@@ -9,7 +9,6 @@ import { AuthProvider } from "../context/AuthContex";
 
 const Layout = ({ children }) => {
 	const locale = useLocale();
-
 	const messages = use(getMessages());
 
 	return (

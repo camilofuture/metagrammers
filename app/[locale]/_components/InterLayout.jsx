@@ -1,10 +1,8 @@
 "use client";
 
-import { Suspense, use, useState } from "react";
-import MainRoot from "../_components/MainRoot";
+import { Suspense, useState } from "react";
 import { Fade, Grow, IconButton, Toolbar } from "@mui/material";
 import { Logo, MAppBar, MDrawer, MGMain, MInvisibleDrawer, WordLogo } from "../../styledComponents";
-import Scrollbars from "react-custom-scrollbars";
 import { LuMenu } from "react-icons/lu";
 import UserZone from "./UserZone";
 import MetaGrammerProfile from "../../../public/images/vector/mg.svg";
@@ -15,9 +13,7 @@ import MBackdrop from "./MBackdrop";
 
 const InterLayout = ({ children }) => {
 	const [openedDrawer, setOpenedDrawer] = useState(false);
-
 	const [permanentDrawer, setPermanentDrawer] = useState(false);
-
 	const [openSignUp, setOpenSignUp] = useState(false);
 
 	const openSignup = () => {
@@ -97,7 +93,9 @@ const InterLayout = ({ children }) => {
 
 				<MGMain permanentdrawer={permanentDrawer} openeddrawer={openedDrawer}>
 					<MParticles op={0} />
-					<MScroll>{children}</MScroll>
+					<MScroll>
+						<Suspense fallback={<div>Loading</div>}>{children}</Suspense>
+					</MScroll>
 				</MGMain>
 			</div>
 		</Fade>

@@ -111,10 +111,6 @@ const MSelector = ({
 				id: id + "select",
 				onOpen: () => setOpen(true),
 				onClose: () => setOpen(false),
-				/*renderValue: (selected) => {
-					console.log("SELECTED: ", selected);
-					if (selected === "") return <PlaceholderForMenuOption>{placeholder}</PlaceholderForMenuOption>;
-				},*/
 			}}
 			InputLabelProps={{
 				htmlFor: id,
@@ -129,9 +125,6 @@ const MSelector = ({
 			}}
 			insidetextfield={insidetextfield}
 		>
-			{/*<MenuItem sx={MenuItem1} value="-1" disabled>
-				Placeholdera
-			</MenuItem>*/}
 			<MenuItem sx={MenuItem1} value="" disabled>
 				<PlaceholderForMenuOption>{placeholder}</PlaceholderForMenuOption>
 			</MenuItem>
