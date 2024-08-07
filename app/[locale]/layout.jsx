@@ -6,6 +6,8 @@ import { getMessages, getTranslations } from "next-intl/server";
 import InterLayout from "./_components/InterLayout";
 import { MenuProvider } from "../context/MenuContext";
 import { AuthProvider } from "../context/AuthContex";
+import { ToastContainer } from "react-toastify";
+import { toastNotificationsOptions } from "../kernel/config";
 
 const Layout = ({ children }) => {
 	const locale = useLocale();
@@ -16,6 +18,7 @@ const Layout = ({ children }) => {
 			<body style={{ background: "#101015" }}>
 				<NextIntlClientProvider locale={locale} messages={messages}>
 					<AuthProvider>
+						<ToastContainer theme={"dark"} style={{ zIndex: 9999999999999 }} {...toastNotificationsOptions} />
 						<MenuProvider>
 							<InterLayout>{children}</InterLayout>
 						</MenuProvider>

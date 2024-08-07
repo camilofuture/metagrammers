@@ -15,4 +15,18 @@ const firebaseApp = !getApps().length ? initializeApp(firebaseConfig) : getApps(
 
 const auth = getAuth(firebaseApp);
 
-export { auth };
+/** @type  import("react-toastify/dist/types").ToastContainerProps */
+const toastNotificationsOptions = {
+	position: "top-right",
+	autoClose: 5000,
+	hideProgressBar: false,
+	closeOnClick: false,
+	newestOnTop: false,
+	rtl: false,
+	pauseOnFocusLoss: true,
+	draggable: true,
+	pauseOnHover: true,
+	limit: 10,
+};
+
+export { auth, toastNotificationsOptions };

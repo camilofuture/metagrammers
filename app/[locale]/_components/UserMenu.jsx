@@ -11,40 +11,26 @@ import {
 	AiOutlineLogout,
 	AiOutlineLock,
 } from "react-icons/ai";
-import { useDispatch, useSelector } from "react-redux";
-import { sound } from "../../system/utils/sound";
-import { unSetUser } from "../../system/redux/features/userSlice";
-import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
-import { setTheme, unSetSettings } from "../../system/redux/features/settingsSlice";
-import { addSettingsTab, setSelectedTabIndex, unSetMultiXen } from "../../system/redux/features/multiXenSlice";
-import { signOut as fireBaseSignOut, getAuth } from "firebase/auth";
-import { signOut } from "../../system/api/access";
-import { asyncNotify } from "../../system/utils/notificationCenter";
-import { RiSettingsLine } from "react-icons/ri";
-import { clearIDF } from "../../system/utils/storage";
-import { unSetCompany } from "../../system/redux/features/companySlice";
+import { globalText } from "@/app/font";
+import { simpleNotify } from "./notificationCenter";
 
 const StyledMenu = styled(Menu)(({ theme }) => ({
 	"& .MuiMenu-paper": {
 		borderRadius: 10,
 		width: 220,
-		background: theme.userMenu.background,
-		color: theme.text.color,
+		background: "#21212c",
+		color: "#fff",
 	},
 }));
 
 const AuxMenuItem = styled(MenuItem)(({ theme }) => ({
-	fontFamily: theme.fontFamily,
+	fontFamily: `${globalText.style.fontFamily}`,
 	fontSize: 14,
 	fontWeight: 400,
 }));
 
-const UserMenu = ({ anchorEl, isOpen, setAnchorEl, mapChanges }) => {
-	const dispatch = useDispatch();
-
-	const theme = useSelector((state) => state.settings.system.theme);
-
-	const handleSignOut = async () => {
+const UserMenu = ({ anchorEl, isOpen, setAnchorEl, mapChanges, handleSignOut }) => {
+	/*const handleSignOut = async () => {
 		setAnchorEl(null);
 
 		asyncNotify(
@@ -61,13 +47,13 @@ const UserMenu = ({ anchorEl, isOpen, setAnchorEl, mapChanges }) => {
 			},
 			"layout/utils/UserMenu%/handleSignOut()"
 		);
-	};
+	};*/
 
 	return (
 		<StyledMenu
 			anchorEl={anchorEl}
 			keepMounted
-			elevation={8}
+			elevation={9}
 			transformOrigin={{ vertical: -15, horizontal: 0 }}
 			marginThreshold={10}
 			transitionDuration={220}
@@ -77,7 +63,7 @@ const UserMenu = ({ anchorEl, isOpen, setAnchorEl, mapChanges }) => {
 		>
 			<AuxMenuItem
 				onClick={() => {
-					dispatch(setSelectedTabIndex(0));
+					simpleNotify();
 					setAnchorEl(null);
 				}}
 			>
@@ -97,39 +83,7 @@ const UserMenu = ({ anchorEl, isOpen, setAnchorEl, mapChanges }) => {
 				<AiOutlineAlert style={{ height: 20, width: 20, marginRight: 7 }} />
 				Soporte
 			</AuxMenuItem>
-			<AuxMenuItem
-				// disabled
-				onClick={() => {
-					dispatch(setTheme(theme === "light" ? "dark" : "light"));
-					setAnchorEl(null);
-				}}
-			>
-				{theme === "light" ? (
-					<>
-						<MdOutlineDarkMode style={{ height: 20, width: 20, marginRight: 7 }} />
-						Descanso Visual
-					</>
-				) : (
-					<>
-						<MdOutlineLightMode style={{ height: 20, width: 20, marginRight: 7 }} />
-						Agudeza Visual
-					</>
-				)}
-			</AuxMenuItem>
-			<AuxMenuItem
-				onClick={() => {
-					sound("menu");
-					dispatch(addSettingsTab());
-					setAnchorEl(null);
-				}}
-			>
-				<RiSettingsLine style={{ height: 20, width: 20, marginRight: 7 }} />
-				Preferencias
-			</AuxMenuItem>
-			<AuxMenuItem onClick={mapChanges}>
-				<AiOutlineCloudSync style={{ height: 20, width: 20, marginRight: 7 }} />
-				Mapear Cambios
-			</AuxMenuItem>
+
 			<AuxMenuItem onClick={mapChanges}>
 				<AiOutlineCloudSync style={{ height: 20, width: 20, marginRight: 7 }} />
 				Modo Xen

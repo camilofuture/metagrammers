@@ -8,6 +8,7 @@ import { CustomAvatar, StyledBadge } from "@/app/styledComponents";
 import { globalText } from "@/app/font";
 import { useAuth } from "@/app/context/AuthContex";
 import MBackdrop from "./MBackdrop";
+import UserMenu from "./UserMenu";
 
 const UserZoneContainer = styled("div")(({ theme }) => ({
 	display: "flex",
@@ -79,7 +80,7 @@ const UserZone = ({ opensignup }) => {
 
 	return (
 		<>
-			{/*<UserMenu anchorEl={anchorEl} isOpen={isMenuOpen} setAnchorEl={setAnchorEl} handleSignOut={handleSignOut} />*/}
+			<UserMenu anchorEl={anchorEl} isOpen={isMenuOpen} setAnchorEl={setAnchorEl} handleSignOut={handleSignOut} />
 
 			<Root>
 				{/*<div
