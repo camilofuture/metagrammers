@@ -1,5 +1,5 @@
 // https://nextjs.org/docs/app/building-your-application/routing/router-handlers
-
+/*
 import { NextResponse } from "next/server";
 
 import { QRCodeCanvas } from "@loskir/styled-qr-code-node";
@@ -38,3 +38,4 @@ export async function GET() {
 		return NextResponse.json({ error: "Failed to generate QR code" }, { status: 500 });
 	}
 }
+*/
