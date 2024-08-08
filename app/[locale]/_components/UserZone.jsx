@@ -7,7 +7,6 @@ import { capitalizeInitials } from "@/app/kernel/core";
 import { CustomAvatar, StyledBadge } from "@/app/styledComponents";
 import { globalText } from "@/app/font";
 import { useAuth } from "@/app/context/AuthContex";
-import MBackdrop from "./MBackdrop";
 import UserMenu from "./UserMenu";
 
 const UserZoneContainer = styled("div")(({ theme }) => ({
@@ -29,8 +28,9 @@ const UserName = styled("div")(({ theme, exist }) => ({
 	lineHeight: 1.3,
 	textTransform: "initial",
 	background: exist ? "linear-gradient(to bottom, #11998e, #38ef7d)" : "linear-gradient(to right, #ff416c, #ff4b2b)",
-	"-webkit-background-clip": "text",
-	"-webkit-text-fill-color": "transparent",
+
+	WebkitBackgroundClip: "text",
+	WebkitTextFillColor: "transparent",
 }));
 
 const UserEmail = styled("div")(({ theme }) => ({

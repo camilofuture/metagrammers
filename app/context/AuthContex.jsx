@@ -39,24 +39,3 @@ export const AuthProvider = ({ children }) => {
 };
 
 export const useAuth = () => useContext(AuthContext);
-
-/*
-
-if (loading) {
-		return (
-			<div
-				style={{
-					background: "#101015",
-					display: "flex",
-					width: "100vw",
-					height: "100vh",
-					justifyContent: "center",
-					alignItems: "center",
-				}}
-			>
-				<PuffLoader size={180} color="#38ef7d" />
-			</div>
-		); // Cambia esto para que sea un componente de React válido
-	}
-
-*/

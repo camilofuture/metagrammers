@@ -1,4 +1,8 @@
-import UIfx from "uifx";
+export const sound = async (type) => {
+	return;
+};
+
+/*import UIfx from "uifx";
 import clickSound from "../../public/sounds/click.mp3";
 import errorSound from "../../public/sounds/error.mp3";
 import infoSound from "../../public/sounds/info.mp3";
@@ -33,7 +37,7 @@ const menuBeep = new UIfx(menuSound, config);
 /**
  * Reproduces a Xeneural specific sound
  * @param {string | void}  type
- */
+ *
 export const sound = async (type) => {
 	try {
 		if (isSoundEnabled) {
@@ -83,3 +87,4 @@ export const sound = async (type) => {
 		console.log("Error on beep ==>", error);
 	}
 };
+*/

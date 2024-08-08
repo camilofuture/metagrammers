@@ -7,12 +7,12 @@ import {
 	HomeText1,
 	MFCountdown,
 	MFCountdownContainer,
-	WordLogo,
 	WordLogo2,
 } from "../styledComponents";
 import { Fade } from "@mui/material";
-import MetaKey from "./_components/MetaKey";
+//import MetaKey from "./_components/MetaKey";
 import GlitchClip from "react-glitch-effect/core/GlitchClip";
+import MetaKey from "./_components/MetaKey";
 
 const Page = () => {
 	return (

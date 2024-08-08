@@ -6,10 +6,11 @@ import { Logo, MAppBar, MDrawer, MGMain, MInvisibleDrawer, WordLogo } from "../.
 import { LuMenu } from "react-icons/lu";
 import UserZone from "./UserZone";
 import MetaGrammerProfile from "../../../public/images/vector/mg.svg";
-import XMenu from "../_menu/XMenu";
 import MScroll from "./MScroll";
 import MParticles from "./MParticles";
 import MBackdrop from "./MBackdrop";
+
+import XMenu from "../_menu/XMenu";
 
 const InterLayout = ({ children }) => {
 	const [openedDrawer, setOpenedDrawer] = useState(false);
@@ -85,17 +86,13 @@ const InterLayout = ({ children }) => {
 						)}
 					</Logo>
 					<MScroll>
-						<Suspense fallback={<div>Loading</div>}>
-							<XMenu openeddrawer={openedDrawer} />
-						</Suspense>
+						<XMenu openeddrawer={openedDrawer} />
 					</MScroll>
 				</MDrawer>
 
 				<MGMain permanentdrawer={permanentDrawer} openeddrawer={openedDrawer}>
 					<MParticles op={0} />
-					<MScroll>
-						<Suspense fallback={<div>Loading</div>}>{children}</Suspense>
-					</MScroll>
+					<MScroll>{children}</MScroll>
 				</MGMain>
 			</div>
 		</Fade>

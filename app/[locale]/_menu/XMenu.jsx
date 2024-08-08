@@ -1,7 +1,6 @@
-// components/XMenu.js
 "use client";
 
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import PersonalMenu from "./utils/PersonalMenu";
 import { useMenu } from "@/app/context/MenuContext";
@@ -47,24 +46,42 @@ const XMenu = ({ openeddrawer }) => {
 				],
 			},
 			/*{
-				key: 2300,
-				text: "menu 2", 
-				isActivated: true,
-				icon: IoSchoolOutline,
-				hasSubMenu: true,
-				isOpen: expandedMenus[2300] || false,
-				subMenu: [
-					{
-						key: 2301,
-						text: "",
-						isActivated: true,
-						to: "/",
-					},
-				],
-			},*/
+                key: 2300,
+                text: "menu 2", 
+                isActivated: true,
+                icon: IoSchoolOutline,
+                hasSubMenu: true,
+                isOpen: expandedMenus[2300] || false,
+                subMenu: [
+                    {
+                        key: 2301,
+                        text: "",
+                        isActivated: true,
+                        to: "/",
+                    },
+                ],
+            },*/
 		],
-		[expandedMenus]
+		[expandedMenus, t]
 	);
+
+	useEffect(() => {
+		if (!router.isReady) return;
+
+		const path = router.asPath.split("/").filter(Boolean).join("/");
+
+		console.log("THIS IS PATH: ", path);
+
+		const matchingMenu = personalMenu
+			.flatMap((menu) => (menu.hasSubMenu ? menu.subMenu : menu))
+			.find((menu) => menu.to === `/${path}`);
+
+		if (matchingMenu) {
+			setSelectedMenu(matchingMenu.key);
+		} else {
+			setSelectedMenu(1000); // Default to home if no match
+		}
+	}, [router.isReady, router.asPath, personalMenu, setSelectedMenu]);
 
 	const handleSelectedMenu = (key, isCollapsable, to) => {
 		setSelectedMenu(key);

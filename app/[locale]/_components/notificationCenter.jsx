@@ -1,5 +1,7 @@
-import "react-toastify/dist/ReactToastify.css";
-import { toast } from "react-toastify";
+//"use client";
+
+//import "react-toastify/ReactToastify.css";
+//import { toast } from "react-toastify";
 import { sound } from "@/app/kernel/sound";
 
 //import CustomNotify from "../../components/shared/CustomNotify";
@@ -40,8 +42,8 @@ export const simpleNotify = (code, position) => {
 			break;
 	}*/
 
-	toast(
+	/*toast(
 		"Probando error", //@ts-ignore
 		{ type: "error", toastId: "20" }
-	);
+	);*/
 };

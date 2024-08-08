@@ -7,9 +7,6 @@ import profile3 from "../../public/images/profileImages/3.png";
 import profile4 from "../../public/images/profileImages/4.png";
 import profile5 from "../../public/images/profileImages/5.png";
 
-// App Locales
-export const locales = ["en", "es"];
-
 export const capitalizeInitials = (text) => {
 	return text.toLowerCase().replace(/\b\w/g, (char) => char.toUpperCase());
 };

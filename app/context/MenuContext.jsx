@@ -1,12 +1,14 @@
 "use client";
 
 import { createContext, useContext, useState, useEffect } from "react";
+//import { useRouter } from "next/navigation";
 
 const MenuContext = createContext();
 
 export const MenuProvider = ({ children }) => {
 	const [selectedMenu, setSelectedMenu] = useState(1000);
 	const [expandedMenus, setExpandedMenus] = useState({});
+	//const router = useRouter();
 
 	// Load state from local storage
 	useEffect(() => {

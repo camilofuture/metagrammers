@@ -2,7 +2,8 @@
 
 import { notFound } from "next/navigation";
 import { getRequestConfig } from "next-intl/server";
-import { locales } from "./app/kernel/core";
+
+const locales = ["en", "es"];
 
 const messageImports = {
 	en: () => import("./messages/en.json"),
