@@ -416,7 +416,7 @@ export const MetaKeySubContainer = styled(Paper)(({ theme }) => ({
 export const MetaKeyTitle = styled("div")(({ theme }) => ({
 	fontSize: 50,
 	color: "#ffffffaa",
-	fontWeight: 700,
+	fontWeight: 500,
 	textAlign: "center",
 }));
 
@@ -538,6 +538,33 @@ export const SignUpContainer = styled(Grid)(({ theme }) => ({
 	borderRadius: 20,
 	boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.25)",
 	padding: 20,
+	display: "flex",
+	alignContent: "center",
+	zIndex: 999999999,
+
+	[theme.breakpoints.only("md")]: {
+		width: "50%",
+		height: "65%",
+	},
+
+	[theme.breakpoints.only("sm")]: {
+		width: "65%",
+		height: "65%",
+	},
+
+	[theme.breakpoints.only("xs")]: {
+		width: "85%",
+		height: "65%",
+	},
+}));
+
+export const BackDropContainer1 = styled(Grid)(({ theme }) => ({
+	width: "35%",
+	height: "65%",
+	background: "#101015",
+	borderRadius: 20,
+	boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.25)",
+	//padding: 20,
 	display: "flex",
 	alignContent: "center",
 	zIndex: 999999999,

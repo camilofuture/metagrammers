@@ -231,7 +231,8 @@ const MCodeEditor = ({ language, value, onChange }) => {
 		<div style={editorStyle}>
 			<MonacoEditor
 				height="400px"
-				defaultLanguage={language}
+				defaultLanguage={"javascript"}
+				language={language}
 				defaultValue={value}
 				onChange={(newValue, e) => onChange(newValue)}
 				theme="darkula"

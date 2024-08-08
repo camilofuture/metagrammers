@@ -5,7 +5,7 @@ const locales = ["en", "es"];
 const nextIntlMiddleware = createMiddleware({
 	locales,
 	defaultLocale: "en",
-	//localePrefix: "never",
+	localePrefix: "never",
 });
 
 export default function (req) {

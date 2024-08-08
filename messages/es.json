@@ -28,6 +28,19 @@
 		"ph3": "Ingresa tu correo electrónico",
 		"ph4": "Ingresa tu Contraseña"
 	},
+	"challengegen": {},
+	"mglevels": {
+		"lvl1": "Novato de la Sintaxis",
+		"lvl2": "Aprendiz de Constantes",
+		"lvl3": "Emisor de Condiciones",
+		"lvl4": "Forjador de Funciones",
+		"lvl5": "Entendido de Paradigmas",
+		"lvl6": "Maestro del Scripting",
+		"lvl7": "Oráculo de la Lógica",
+		"lvl8": "Alquimista de Algoritmos",
+		"lvl9": "Ilusionista de Compiladores",
+		"lvl10": "Supremo de los Ensambladores"
+	},
 	"notfound": {
 		"text1": "La conexion con el metaverso ha fallado.",
 		"btntext": "Volver a Localhost"

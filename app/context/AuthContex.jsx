@@ -1,10 +1,10 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState } from "react";
-import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "../kernel/config";
-import { getUserFromLocalStorage, saveUserToLocalStorage } from "../kernel/localStorage";
-import { getUserByID } from "../[locale]/actions/user";
+//import { onAuthStateChanged } from "firebase/auth";
+//import { auth } from "../kernel/config";
+//import { getUserFromLocalStorage, saveUserToLocalStorage } from "../kernel/localStorage";
+//import { getUserByID } from "../[locale]/actions/user";
 
 const AuthContext = createContext();
 
@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }) => {
 	const [user, setUser] = useState(null);
 	const [loading, setLoading] = useState(true);
 
-	useEffect(() => {
+	/*useEffect(() => {
 		const storedUser = getUserFromLocalStorage();
 		if (storedUser) {
 			setUser(storedUser);
@@ -33,7 +33,7 @@ export const AuthProvider = ({ children }) => {
 		});
 
 		return () => unsubscribe();
-	}, []);
+	}, []);*/
 
 	return <AuthContext.Provider value={{ user, setUser, loading }}>{children}</AuthContext.Provider>;
 };

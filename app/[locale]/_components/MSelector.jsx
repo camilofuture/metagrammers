@@ -25,30 +25,9 @@ const MenuOptions = (displaymode, key1, key2, valueKey, options, disabled, open)
 	else if (displaymode === "twokeys")
 		return options.map((op, i) => (
 			<MenuItem sx={MenuItem1} key={i} value={op[valueKey]} onClick={op.action ? op.action : () => {}}>
-				{`${op[key1].toUpperCase()} - ${op[key2].toUpperCase()}`}
-			</MenuItem>
-		));
-	else if (displaymode === "custom1")
-		return options.map((op, i) => (
-			<MenuItem
-				sx={MenuItem1}
-				key={i}
-				value={op[valueKey]}
-				style={{ fontWeight: 300 }}
-				onClick={op.action ? op.action : () => {}}
-			>
-				{open ? (
-					<>
-						{op[key1]}
-						<br />
-						hola 1
-						<br />
-						hola 2
-					</>
-				) : (
-					op[key1]
-				)}
-				<br />
+				<div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+					{op[key1]} {op[key2]}
+				</div>
 			</MenuItem>
 		));
 	else if (displaymode === "keysymbol")

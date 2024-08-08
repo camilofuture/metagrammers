@@ -23,6 +23,7 @@
 		"immer": "^10.1.1",
 		"next": "14.2.5",
 		"next-intl": "^3.16.0",
+		"next-qrcode": "^2.5.1",
 		"qr-code-styling": "^1.6.0-rc.1",
 		"react": "^18",
 		"react-countdown": "^2.3.5",

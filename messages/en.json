@@ -28,6 +28,19 @@
 		"ph3": "Enter your email",
 		"ph4": "Enter your password"
 	},
+	"challengegen": {},
+	"mgevels": {
+		"lvl1": "Novato de la Sintaxis",
+		"lvl2": "Aprendiz de Constantes",
+		"lvl3": "Emisor de Condiciones",
+		"lvl4": "Forjador de Funciones",
+		"lvl5": "Entendido de Paradigmas",
+		"lvl6": "Maestro del Scripting",
+		"lvl7": "Oráculo de la Lógica",
+		"lvl8": "Alquimista de Algoritmos",
+		"lvl9": "Ilusionista de Compiladores",
+		"lvl10": "Supremo de los Ensambladores"
+	},
 	"notfound": {
 		"text1": "Failed to establish a connection with the metaverse.",
 		"btntext": "Back to Home"

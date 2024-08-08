@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, useState } from "react";
+import { useState } from "react";
 import { Fade, Grow, IconButton, Toolbar } from "@mui/material";
 import { Logo, MAppBar, MDrawer, MGMain, MInvisibleDrawer, WordLogo } from "../../styledComponents";
 import { LuMenu } from "react-icons/lu";
@@ -100,3 +100,5 @@ const InterLayout = ({ children }) => {
 };
 
 export default InterLayout;
+
+//<MParticles op={0} />

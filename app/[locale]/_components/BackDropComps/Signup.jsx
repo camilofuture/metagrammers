@@ -4,13 +4,13 @@ import { SignUpContainer, SignupFormTitle } from "@/app/styledComponents";
 import { Button, Grow } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import React, { useState } from "react";
-import MTextField from "../_components/MTextField";
+import MTextField from "../MTextField";
 import dayjs from "dayjs";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { useTranslations } from "next-intl";
 import { Button3, Button4 } from "@/app/styles";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth"; // Importar Firebase Auth
-import { createUser } from "../actions/user";
+import { createUser } from "../../actions/user";
 import { isEmail, isLength } from "validator";
 import { PuffLoader } from "react-spinners";
 import { useAuth } from "@/app/context/AuthContex";

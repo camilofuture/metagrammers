@@ -12,9 +12,16 @@ import {
 import { Fade } from "@mui/material";
 //import MetaKey from "./_components/MetaKey";
 import GlitchClip from "react-glitch-effect/core/GlitchClip";
+import { useEffect, useState } from "react";
 import MetaKey from "./_components/MetaKey";
 
 const Page = () => {
+	const [isLoaded, setIsLoaded] = useState(false);
+
+	useEffect(() => {
+		setIsLoaded(true);
+	}, []);
+
 	return (
 		<Fade in timeout={400}>
 			<Grid container spacing={0} style={{ height: "100%" }}>
@@ -38,9 +45,8 @@ const Page = () => {
 						valía y desbloquear un clúster con tu Metakey. ¡No pierdas la oportunidad de ser parte de esta épica
 						aventura!
 					</HomeText1>
-					<MFCountdownContainer>
-						<MFCountdown date={"2024-10-01T12:00:00"} />
-					</MFCountdownContainer>
+
+					<MFCountdownContainer>{isLoaded && <MFCountdown date={"2024-10-01T12:00:00"} />}</MFCountdownContainer>
 				</HomeContainer>
 
 				<HomeSubContainer2 xs={0} sm={0} md={6}>
